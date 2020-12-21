@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="tkd-1.0-SNAPSHOT">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <root id="archive" name="tkd-1.0-SNAPSHOT.jar">
+      <element id="module-output" name="tkd.main" />
+    </root>
+  </artifact>
+</component>
