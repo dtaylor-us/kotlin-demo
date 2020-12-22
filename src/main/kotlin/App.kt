@@ -1,11 +1,12 @@
-import kotlinx.browser.document
 import kotlinx.css.*
+import react.*
 import react.dom.*
 import styled.css
 import styled.styledDiv
 
-fun main() {
-    render(document.getElementById("root")) {
+
+class App : RComponent<RProps, RState>() {
+    override fun RBuilder.render() {
         h1 {
             +"KotlinConf Explorer"
         }
@@ -13,19 +14,15 @@ fun main() {
             h3 {
                 +"Videos to watch"
             }
-            for(video in unwatchedVideos) {
-                p {
-                    +"${video.speaker}: ${video.title}"
-                }
+            videoList {
+                videos = unwatchedVideos
             }
 
             h3 {
                 +"Videos watched"
             }
-            for(video in watchedVideos) {
-                p {
-                    +"${video.speaker}: ${video.title}"
-                }
+            videoList {
+                videos = watchedVideos
             }
         }
         styledDiv {
